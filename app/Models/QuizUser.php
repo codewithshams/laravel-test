@@ -23,5 +23,9 @@ class QuizUser extends Authenticatable
     ];
     
 
+    function result() {
+        return $this->belongsTo(Result::class, 'user_id', 'id');
+    }
+
     
 }
